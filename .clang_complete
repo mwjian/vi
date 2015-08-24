@@ -1,0 +1,32 @@
+-nostdinc
+-isystem /home/freescale/53286/buildroot-2011.02/output/host/usr/lib/gcc/arm-unknown-linux-uclibcgnueabi/4.3.5/include
+-I/home/freescale/53286/clone-linux/arch/arm/include
+-I/home/freescale/53286/clone-linux/include
+-include /home/freescale/53286/clone-linux/include/generated/autoconf.h
+-D__KERNEL__
+-mlittle-endian
+-I/home/freescale/53286/clone-linux/arch/arm/mach-at91/include
+-Wall
+-Wundef
+-Wstrict-prototypes
+-Wno-trigraphs
+-fno-strict-aliasing
+-fno-common
+-Werror-implicit-function-declaration
+-Wno-format-security
+-fno-delete-null-pointer-checks
+-O2
+-marm
+-mabi=aapcs-linux
+-mno-thumb-interwork
+-funwind-tables
+-D__LINUX_ARM_ARCH__=5
+#-march=armv5te
+-mtune=arm9tdmi
+-msoft-float
+-Uarm
+-fno-stack-protector
+-fomit-frame-pointer
+-Wdeclaration-after-statement
+-Wno-pointer-sign
+-fno-strict-overflow
