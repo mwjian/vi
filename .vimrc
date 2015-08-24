@@ -1,3 +1,22 @@
+" " show menu)
+set completeopt=menu,menuone,longest
+"
+" " Limit popup menu height
+set pumheight=15
+
+set conceallevel=2
+set concealcursor=vin
+let g:clang_snippets=1
+let g:clang_conceal_snippets=1
+" The single one that works with clang_complete
+let g:clang_snippets_engine='clang_complete'
+let g:clang_jumpto_declaration_key='<Nop>'
+let g:clang_jumpto_back_key='<Nop>'
+
+" SuperTab completion fall-back
+let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
+
+colorscheme desert
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -9,15 +28,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/SuperTab'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'vim-scripts/bufexplorer.zip'
+"Plugin 'Valloric/YouCompleteMe'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/The-NERD-tree'
-Plugin 'vim-scripts/SuperTab'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'vim-scripts/bufexplorer.zip'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -44,5 +65,3 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-colorscheme desert
-
